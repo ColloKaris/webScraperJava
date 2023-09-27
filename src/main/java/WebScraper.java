@@ -17,7 +17,8 @@ public class WebScraper {
             for (Element country : countries) {
                 String countryName = country.select(".country-name").text();
                 String capitalCity = country.select(".country-capital").text();
-                System.out.println(countryName + " - " + capitalCity);
+                String population = country.select(".country-population").text();
+                System.out.println(countryName + " - " + capitalCity + " - Population - " + population);
             }
 
         } catch (IOException e) {
